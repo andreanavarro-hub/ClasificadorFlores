@@ -3,8 +3,9 @@ import joblib
 import numpy as np
 
 # Cargar el modelo y el codificador
-mlp_model = joblib.load('/content/mlp_model.joblib')
-label_encoder = joblib.load('/content/label_encoder.joblib')
+# Usar rutas relativas asumiendo que los archivos están en el mismo directorio que app.py
+mlp_model = joblib.load('mlp_model.joblib')
+label_encoder = joblib.load('label_encoder.joblib')
 
 st.title('Predicción de Especies de Flores')
 st.write('Introduce las características de la flor para predecir su especie.')
